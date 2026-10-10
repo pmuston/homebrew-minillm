@@ -11,7 +11,7 @@ brew trust pmuston/minillm     # required for third-party taps
 | Formula | Install on | Provides |
 | --- | --- | --- |
 | `minillm-server` | the Apple Silicon Mac (macOS 14+) | vllm-mlx as a Homebrew service with a built-in watchdog; `minillm-server setup / status / test / logs / key` |
-| `minillm` | every client (macOS, Linux) | `ask` and `llmbatch` |
+| `minillm` | every client (macOS, Linux) | `ask`, `llmbatch` and `agent` |
 
 ```bash
 # on the server

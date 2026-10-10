@@ -1,32 +1,32 @@
 class Minillm < Formula
-  desc "Clients for a private LLM server: ask for one prompt, llmbatch for many"
+  desc "Clients for a private LLM server: ask, llmbatch and a tool-using agent"
   homepage "https://github.com/pmuston/homebrew-minillm"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.1/minillm-v0.1.1-darwin-arm64.tar.gz"
-      sha256 "b787755fb84ded75045f23e6990159fd42f1903ee01faf6adb41d10f3e39ee0e"
+      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.2/minillm-v0.1.2-darwin-arm64.tar.gz"
+      sha256 "78b06e2148b6176328650f7e009fabb70eb5160cd7517b4e2060fd36efcb522c"
     end
     on_intel do
-      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.1/minillm-v0.1.1-darwin-amd64.tar.gz"
-      sha256 "ffb4e15281d02e9ca809045687fb80f7427932be1850766a584d6cf9352be032"
+      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.2/minillm-v0.1.2-darwin-amd64.tar.gz"
+      sha256 "504cc1c65b8e6f728a4e02944d12dc0086658be60e1aaadf117116e97b6d707d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.1/minillm-v0.1.1-linux-arm64.tar.gz"
-      sha256 "1b180e97bee6cacfbecf9946a92fd2ff4b34211d0273246303d63e7cab07bd15"
+      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.2/minillm-v0.1.2-linux-arm64.tar.gz"
+      sha256 "9810236a1db061a62aa7beb00ceef04fae2bf584d40f792a05e4d7f3cd33f570"
     end
     on_intel do
-      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.1/minillm-v0.1.1-linux-amd64.tar.gz"
-      sha256 "2e1b667a31046d53790c4cb2ebe7608041916875f5ff03613e4ab913f45ee46c"
+      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.2/minillm-v0.1.2-linux-amd64.tar.gz"
+      sha256 "b62cd10967ac8858a399bddff8e8f8b148d471a5d3fca5ecc05d9197eccada8b"
     end
   end
 
   def install
-    bin.install "ask", "llmbatch"
+    bin.install "ask", "llmbatch", "agent"
     pkgshare.install "templates"
     doc.install "clients.md"
   end
@@ -48,5 +48,6 @@ class Minillm < Formula
   test do
     assert_match "ask v#{version}", shell_output("#{bin}/ask -version")
     assert_match "llmbatch v#{version}", shell_output("#{bin}/llmbatch -version")
+    assert_match "agent v#{version}", shell_output("#{bin}/agent -version")
   end
 end
