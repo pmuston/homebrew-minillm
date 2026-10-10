@@ -1,8 +1,8 @@
 class MinillmServer < Formula
   desc "Private LLM server for Apple Silicon: vllm-mlx as a service with a watchdog"
   homepage "https://github.com/pmuston/homebrew-minillm"
-  url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.2/minillm-server-v0.1.2.tar.gz"
-  sha256 "6f1fcf2078eeb8719bb5c0d48019c765c2f2e03725c06151cc0b53b820f76be9"
+  url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.3/minillm-server-v0.1.3.tar.gz"
+  sha256 "197078f5b6fdab06cce1ca86ed512e17eed101cc8bef5a98cfc2350fbaf97aae"
   license "MIT"
 
   depends_on arch: :arm64
@@ -12,8 +12,9 @@ class MinillmServer < Formula
   def install
     inreplace %w[minillm-server serve-llm.sh], "@@ETC_DIR@@", "#{etc}/minillm"
     inreplace "minillm-server", "@@LOG_FILE@@", "#{var}/log/minillm-server.log"
+    inreplace "minillm-server", "@@LIBEXEC@@", opt_libexec.to_s
     bin.install "minillm-server"
-    libexec.install "serve-llm.sh"
+    libexec.install "serve-llm.sh", "cache-test.py"
     doc.install "server.md"
   end
 
