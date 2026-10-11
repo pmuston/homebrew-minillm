@@ -5,23 +5,23 @@ class Minillm < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.3/minillm-v0.1.3-darwin-arm64.tar.gz"
-      sha256 "4ef130db128d5f5407c7cc4b2fdd870b89216c89553045378d5196ccd691aef5"
+      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.4/minillm-v0.1.4-darwin-arm64.tar.gz"
+      sha256 "0109ef68b4551ed154c4cb7ef3b7d2fa90abf3fc8c0bd65d6e3ceb99dd23a870"
     end
     on_intel do
-      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.3/minillm-v0.1.3-darwin-amd64.tar.gz"
-      sha256 "df46ae56e0db309b6c2f6eb9e87d85000bfcc76b27b4abdc4d3163aef7c23a04"
+      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.4/minillm-v0.1.4-darwin-amd64.tar.gz"
+      sha256 "41f8b22979b75747e974a21a95014f6468055b271b50fdb8ded0273db93e56c6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.3/minillm-v0.1.3-linux-arm64.tar.gz"
-      sha256 "dfab609872bfff1d30de2724c75bd6d655ada331b0b2d45e79b7b5e1c96b339c"
+      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.4/minillm-v0.1.4-linux-arm64.tar.gz"
+      sha256 "f65e0cc54dbd02ad9a2620dcbb536b58025fc67626509c72e93c59f525ca6cc2"
     end
     on_intel do
-      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.3/minillm-v0.1.3-linux-amd64.tar.gz"
-      sha256 "3f07f4bf32bd49609788a692756c5e84140ac0400afbb08c213745c483c92fba"
+      url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.4/minillm-v0.1.4-linux-amd64.tar.gz"
+      sha256 "7c798cd3eb215e96c22688361a477eb55f6a8b14fe0436a0651723e967ac74d1"
     end
   end
 

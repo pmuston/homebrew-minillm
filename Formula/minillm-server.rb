@@ -1,8 +1,8 @@
 class MinillmServer < Formula
   desc "Private LLM server for Apple Silicon: vllm-mlx as a service with a watchdog"
   homepage "https://github.com/pmuston/homebrew-minillm"
-  url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.3/minillm-server-v0.1.3.tar.gz"
-  sha256 "197078f5b6fdab06cce1ca86ed512e17eed101cc8bef5a98cfc2350fbaf97aae"
+  url "https://github.com/pmuston/homebrew-minillm/releases/download/v0.1.4/minillm-server-v0.1.4.tar.gz"
+  sha256 "f133df856f03f217e60cf89f1fdd4582a1f0462899e89f034f31a5cde4f8d8c4"
   license "MIT"
 
   depends_on arch: :arm64
